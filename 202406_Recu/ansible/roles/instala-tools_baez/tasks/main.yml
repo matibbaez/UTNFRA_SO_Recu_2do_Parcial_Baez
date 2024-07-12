@@ -1,0 +1,30 @@
+---
+- name: Instalar htop
+  apt:
+    name: htop
+    state: present
+  become: yes
+
+- name: Instalar net-tools
+  apt:
+    name: net-tools
+    state: present
+  become: yes
+
+- name: Instalar tmux
+  apt:
+    name: tmux
+    state: present
+  become: yes
+
+- name: Instalar tree
+  apt:
+    name: tree
+    state: present
+  become: yes
+
+- name: Instalar speedtest-cli
+  apt:
+    name: speedtest-cli
+    state: present
+  become: yes

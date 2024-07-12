@@ -1,0 +1,25 @@
+---
+- name: Incluir variables
+  include_vars:
+    file: vars/main.yml
+
+- name: Crear directorio /tmp/alumno
+  file:
+    path: /tmp/alumno
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Crear archivo /tmp/alumno/datos.txt desde template
+  template:
+    src: datos.j2
+    dest: /tmp/alumno/datos.txt
+    owner: root
+    group: root
+    mode: '0644'
+
+
+
+
+

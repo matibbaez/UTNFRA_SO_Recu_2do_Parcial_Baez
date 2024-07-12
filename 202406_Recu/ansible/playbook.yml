@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: "Ejecutar el rol 2PRecuperatorio"
+      include_role:
+        name: 2PRecuperatorio
+
+    - name: "Después de la ejecución del rol 2PRecuperatorio"
+      debug:
+        msg: "Rol 2PRecuperatorio ejecutado correctamente."
+
+    - name: "Ejecutar el rol instala-tools_baez"
+      include_role:
+        name: instala-tools_baez
+
+    - name: "Después de la ejecución del rol instala-tools_baez"
+      debug:
+        msg: "Rol instala-tools_baez ejecutado correctamente."
+
+
