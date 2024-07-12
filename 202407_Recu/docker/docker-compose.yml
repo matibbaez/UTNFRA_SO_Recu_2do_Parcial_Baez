@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    image: matiasbaezc/web2-baez:v1
+    ports:
+      - "8081:80"
+    volumes:
+      - ./web/file:/usr/share/nginx/html/file
+ 
